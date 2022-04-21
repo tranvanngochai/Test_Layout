@@ -1,0 +1,44 @@
+header.wrapper {
+    background-color: $heading-color;
+    color: $text-color;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+
+        .header-left {
+            display: flex;
+            gap: 30px;
+
+            .header-left__item {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .header-right {
+            display: flex;
+            gap: 30px;
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-left {
+        display: none !important;
+    }
+
+    .header-right {
+        margin: auto;
+    }
+}

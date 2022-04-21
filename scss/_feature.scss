@@ -1,0 +1,115 @@
+.feature {
+    display: flex;
+    gap: 50px;
+
+    &-left {
+        flex: 50%;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &-right {
+        flex: 50%;
+
+        &__text {
+            margin: 30px 0;
+        }
+
+        &__heading {
+            color: $heading-color;
+            margin-bottom: 30px;
+        }
+
+        &__content {
+            p {
+                font-size: 15px;
+                margin: 30px 0;
+                color: $gray-lighter-color;
+                line-height: 30px;
+            }
+
+        }
+
+        &__group {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 10px;
+
+            &--item {
+                margin-bottom: 30px;
+
+                h2 {
+                    margin-top: 10px;
+                }
+
+                p {
+                    color: $gray-lighter-color;
+                    line-height: 30px;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        &__button {
+            max-width: 210px;
+
+            a {
+                color: $text-color;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .feature-right__text {
+        margin: 20px 0;
+    }
+
+    .feature-right__heading {
+        margin-bottom: 20px;
+    }
+
+    .feature-right__content p {
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    .feature-right__group--item {
+        margin-bottom: unset;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .feature {
+        flex-direction: column;
+    }
+
+    .feature-left img {
+        margin: auto;
+        width: 50%;
+    }
+
+    .feature-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__content {
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+
+    .feature-right__group--item {
+        text-align: center;
+
+        img {
+            margin: auto;
+        }
+    }
+}

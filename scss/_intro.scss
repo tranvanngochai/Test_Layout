@@ -1,0 +1,49 @@
+.intro {
+    padding: 100px 0;
+
+    &-group {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 30px;
+
+        &__item {
+            display: flex;
+            gap: 30px;
+
+            &.p-top {
+                padding-top: 20%;
+            }
+
+            &--content {
+                h2 {
+                    color: $primary-color;
+
+                }
+
+                p {
+                    color: $heading-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .intro {
+        &-group {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            place-items: center;
+
+            &__item {
+                &.p-top {
+                    padding-top: 0;
+
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {}

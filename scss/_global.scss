@@ -1,0 +1,90 @@
+body {
+    line-height: 1;
+    font-family: $font;
+    color: $text-color;
+    font-weight: 400;
+    background-color: white;
+}
+
+h2 {
+    font-size: 30px;
+    color: $heading-color;
+    line-height: 40px;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: $font;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text {
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: $font;
+    line-height: 1;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $gray-lighter-color;
+    }
+}
+
+.boxed {
+    max-width: 555px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .button {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h2 {
+        font-size: 20px;
+    }
+}

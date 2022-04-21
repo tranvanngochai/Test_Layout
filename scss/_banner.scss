@@ -1,0 +1,109 @@
+.banner {
+    position: relative;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .banner-caption {
+        max-width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-30%, -50%);
+
+        &__text {
+            margin-bottom: 30px;
+            font-size: 20px;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        &__heading {
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 50px;
+                color: $text-color;
+                letter-spacing: 5px;
+                line-height: 70px;
+            }
+        }
+
+        &__group {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            gap: 20px;
+
+            &--button {
+                a {
+                    margin-right: 10px;
+                    color: $text-color;
+                }
+            }
+
+            &--play {
+                background-color: $primary-color;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $gray-lighter-color;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .banner-caption__heading {
+        h2 {
+            font-size: 40px !important;
+            letter-spacing: 3px !important;
+            line-height: 50px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-caption__heading h2 {
+        font-size: 30px !important;
+        letter-spacing: 2px !important;
+        line-height: 30px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .banner-caption__heading h2 {
+        font-size: 20px !important;
+        letter-spacing: 1px !important;
+        line-height: 20px !important;
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .banner .banner-caption__text {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .banner .banner-caption__heading {
+        margin-bottom: 10px;
+    }
+
+    .banner .banner-caption__group--play {
+        width: 40px;
+        height: 40px;
+    }
+}
